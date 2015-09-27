@@ -53,7 +53,10 @@ void UU_PutChar(USART_TypeDef* USARTx, uint8_t ch);
 void UU_PutString(USART_TypeDef* USARTx, uint8_t* message);
 
 /**
-  * @brief Sends a single character to the USART
+  * @brief Converts an unsigned 32 integer to characters and then
+  *	   sends it character by character. Please note that the maximum
+  *	   value is 4,294,967,295 which equals 0xFFFFFFFF. Any number 
+  *	   greater than this number will be turncated.
   * @param USARTx: specifies the USART to use
   */
 void UU_PutNumber(USART_TypeDef* USARTx, uint32_t x);
